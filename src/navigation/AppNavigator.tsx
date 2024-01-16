@@ -2,19 +2,19 @@ import React from 'react'
 import { createNativeStackNavigator as createStackNavigator } from '@react-navigation/native-stack'
 
 import { NAV_HEADER_OPTION } from '@/constants'
-import ScreenA from '@/screens/ScreenA'
+import Home from '@/screens/Home'
 
 const Stack = createStackNavigator()
 
 const AppNavigator = () => {
   return (
     <Stack.Navigator
-      initialRouteName="ScreenA"
+      initialRouteName="Home"
       screenOptions={{
         ...NAV_HEADER_OPTION,
       }}
     >
-      <Stack.Screen name="ScreenA" component={ScreenA} />
+      <Stack.Screen name="Home" component={Home} />
     </Stack.Navigator>
   )
 }

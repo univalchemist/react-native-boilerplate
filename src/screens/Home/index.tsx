@@ -7,14 +7,14 @@ import { APP_LANGUAGES } from '@/constants'
 
 import styles from './styles'
 
-const ScreenA: React.FC = () => {
+const Home: React.FC = () => {
   const { onChangeLanguage, appLang, isRTL } = useApp()
   const { onSignOut } = useAuth()
 
   console.log({ appLang, isRTL })
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{`StackA-ScreenA-${t('lorem')}`}</Text>
+      <Text style={styles.title}>{`Home-Home-${t('lorem')}`}</Text>
       <TouchableOpacity style={styles.button} onPress={onSignOut}>
         <Text style={styles.buttonText}>{t('signOut')}</Text>
       </TouchableOpacity>
@@ -22,7 +22,7 @@ const ScreenA: React.FC = () => {
         style={styles.button}
         onPress={() =>
           onChangeLanguage({
-            lng: appLang === APP_LANGUAGES.EN ? APP_LANGUAGES.HE : APP_LANGUAGES.EN,
+            lng: appLang === APP_LANGUAGES.en ? APP_LANGUAGES.en : APP_LANGUAGES.en,
           })
         }
       >
@@ -32,4 +32,4 @@ const ScreenA: React.FC = () => {
   )
 }
 
-export default ScreenA
+export default Home

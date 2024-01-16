@@ -20,7 +20,7 @@ export const AuthContext = createContext<IAuthContext>({
 })
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [authenticated, setAuthenticated] = useState<boolean>(false)
+  const [authenticated, setAuthenticated] = useState<boolean>(true)
 
   const onSignIn = useCallback((payload: ISignInPayload) => {
     if (payload.email && payload.password) {
